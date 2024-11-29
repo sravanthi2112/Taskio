@@ -1,0 +1,336 @@
+
+.todo-app-content-container{
+    width: 100%;
+    height : 100%;
+    overflow: auto; 
+    background-color: transparent;
+    padding-top: 22px;
+}
+
+
+.todo-app-content-container:hover{
+    && ::-webkit-scrollbar {
+        width: 5px;
+        margin-right: 5px;
+    }
+}
+
+.todo-app-content-container::-webkit-scrollbar {
+    width: 5px;
+    margin-right: 5px;
+}
+
+
+.todo-app-content-container::-webkit-scrollbar-thumb{
+        background-color: rgb(196, 196, 196);
+        border-radius: 10px;
+}
+
+.todo-dark-content-container::-webkit-scrollbar-thumb{
+    background-color: rgb(107, 107, 107);
+    border-radius: 10px;
+}
+
+
+.todo-dark-content-container{
+    background-color: rgb(44, 43, 43);
+}
+
+
+.input-conatiner{
+    display: none;
+    align-items: center;
+    justify-content: end;
+    padding-right: 10px;
+}
+
+.large-input-conatiner{
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    width: 50%;
+    border: rgb(99, 98, 98) 0px solid;
+    border-radius: 8px;
+    box-shadow: 4px 4px 10px 0px #c4c3c3 ;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+
+.input-active-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 25px;
+    padding-right: 10px;
+    width: 50%;
+    border: rgb(99, 98, 98) 0px solid;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px 0px #c4c3c3 ;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.dark-input-active-container{
+    box-shadow: 4px 4px 10px 0px #3f3c3c ; 
+    border: rgb(141, 140, 140) 1px solid;
+    padding-bottom: 10px;
+}
+
+.input-container-options{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.search-bar{
+    margin-right: 5px;
+    margin-top: 3px;
+    width: 97%;
+    height: 35px;
+    padding-left: 12px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    outline:  none;
+    color: rgb(110, 110, 110);
+    border: none;
+    background-color: transparent;
+    white-space: normal;
+}
+
+.dark-search-bar{
+    color: rgb(196, 196, 196);
+}
+
+.dark-search-bar::placeholder {
+    color: rgb(196, 196, 196);
+}
+
+.date-input-field{
+    width: 120px;
+    color:  rgb(90, 89, 89);
+}
+
+.dark-date-input-field{
+    width: 120px;
+    color: rgb(201, 201, 201);
+}
+
+.addicon{
+    background-color: rgb(205, 197, 241);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    color: rgb(93, 93, 94);
+    padding: 3px;
+}
+
+.empty-view-conatiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bulb-img{
+    height: 150px;
+    width: 120px;
+    color: rgb(204, 201, 201);
+    margin-top: 50px;
+    padding: 0px;
+}
+
+
+.background-colors{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(179, 179, 179);
+}
+
+.selected-color{
+    opacity: 90%;
+    border: 1px solid rgb(202, 201, 201);
+}
+
+
+.always-show-add-task-btn{
+    width: 80px;
+    height: 32px;
+    font-size: 12px;
+    background-color:  rgb(228, 228, 230);
+    border: 1px solid rgb(199, 199, 199);
+    border-radius: 30px;
+}
+
+.tooltip-container { 
+    position: relative; 
+    display: inline-block; 
+    align-items: flex-start;
+    width: 80%;
+    justify-content: flex-start;
+} 
+
+.apply-filter-btn{
+    width: 120px;
+    height: 40px;
+}
+
+.tooltip-popup { 
+    visibility: visible; 
+    width: 80vw; 
+    background-color: rgb(241, 241, 241); 
+    color: #363636; 
+    border-radius: 5px; 
+    padding: 10px; 
+    padding-bottom: 20px;
+    position: absolute; 
+    z-index: 10; 
+    top: 100%;  
+    margin-left: 0px;
+    opacity: 0; /* Initially hidden */ 
+    transition: opacity 0.3s; } 
+.tooltip-container:hover 
+
+.tooltip-popup { opacity: 1; /* Show on hover */ }
+
+.toolcolor-container{
+    display: flex;
+}
+
+.toolkit-date-container{
+    margin-right: 25px;
+}
+
+
+.dark-sortby-btn{
+    width: 80px;
+    height: 32px;
+    font-size: 12px;
+    color: rgb(202, 202, 202);
+    background-color:  rgb(54, 54, 54);
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.dark-always-show-add-task-btn{
+    width: 80px;
+    height: 32px;
+    font-size: 12px;
+    color: rgb(228, 228, 228);
+    background-color: transparent;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 30px;
+}
+
+
+.todos-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.list-group{
+    width: 80%;
+}
+
+.emptyview-heading{
+    color: rgb(95, 96, 97);
+    text-align: center;
+    font-weight: 400;
+    margin: 5px;
+}
+
+.dark-emtyview-heading{
+    color: rgb(185, 185, 185);
+    text-align: center;
+    font-weight: 400;
+    margin: 5px;
+}
+
+ul{
+    padding: 0px;
+}
+
+.todo-type-heading{
+    color: rgb(57, 57, 58);
+    font-weight: 500;
+}
+
+.dark-todo-type-heading{
+    color: rgb(209, 209, 211);
+    font-weight: 500;
+}
+
+.dark-hrline{
+    border-top: none;
+    border-bottom: 1px solid rgb(116, 116, 116);
+}
+
+.dark-tick{
+    color: #ffffff;
+}
+
+.smallscreen-applybtn{
+    display: none;
+}
+
+@media screen and (max-width : 690px) {
+    .app-name{
+        font-size: 20px;
+    }
+
+    .add-todo-button{
+        width: 150px;
+        height: 40px;
+        font-size: 12px;
+        border-radius: 20px;
+    }
+
+    .large-input-conatiner{
+        margin-top: 0px;
+        width: 65%;
+    }
+
+    .search-bar{
+        width: 70%;
+        font-size: 15px;
+    }
+    
+    .input-active-container{
+        width: 65%;
+        margin-top: 0px;
+    }
+
+    .date-input-field{
+        width: 120px;
+        color:  rgb(102, 102, 102);
+    }
+
+    .dark-date-input-field{
+        width: 120px;
+    }
+    .toolkit-date-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .largescren-applybtn{
+        display: none;
+    }
+
+    .smallscreen-applybtn{
+        display: block;
+    }
+
+}
+
+
