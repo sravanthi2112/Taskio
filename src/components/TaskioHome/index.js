@@ -199,43 +199,6 @@ const TaskioHome =  props => {
                     </div>}
                 </div>
             </div> 
-            <div className="todos-container">
-            <div className="tooltip-container" onMouseLeave={handleMouseLeave}> 
-                    <button className={theme ? "dark-delete-button" : "delete-btn"}  onMouseEnter={handleMouseEnter} >Filters</button>
-                    {isHovered && ( <div className="tooltip-popup "> 
-                        <h4>Based on Colors</h4>
-                        <div className="toolcolor-container">
-                            {theme ? <>
-                            <div className={filtercolor.includes('c1') ? "selected-color background-colors darkwhite" : "background-colors darkwhite"}  onClick={() => onClikedflitercolor('c1')}>  {filtercolor.includes('c1') && <HiCheck className= {theme && "dark-tick"} /> } </div>
-                            <div className={filtercolor.includes('c2') ? "selected-color background-colors darkred" : "background-colors darkred"}  onClick={() => onClikedflitercolor('c2')}> {filtercolor.includes('c2') && <HiCheck className= {theme && "dark-tick"} />} </div>
-                            <div className={filtercolor.includes('c3') ? "selected-color background-colors darkmint" : "background-colors darkmint"}  onClick={() => onClikedflitercolor('c3')}> {filtercolor.includes('c3') && <HiCheck className= {theme && "dark-tick"} />}</div>
-                            <div className={filtercolor.includes('c4') ? "selected-color background-colors darkpurple" : "background-colors darkpurple"}  onClick={() => onClikedflitercolor('c4')}> {filtercolor.includes('c4') && <HiCheck className= {theme && "dark-tick"} />}</div>
-                            <div className={filtercolor.includes('c5') ? "selected-color background-colors darksand" : "background-colors darksand"}  onClick={() => onClikedflitercolor('c5')}> {filtercolor.includes('c5') && <HiCheck className= {theme && "dark-tick"} />}</div>
-                            </> : <>
-                            <div className={filtercolor === 'c1' ? "selected-color background-colors white" : "background-colors white"}  onClick={() => onClikedflitercolor('c1')}>  {filtercolor === 'c1' && <HiCheck /> } </div>
-                            <div className={filtercolor === 'c2' ? "selected-color background-colors red" : "background-colors red"}  onClick={() => onClikedflitercolor('c2')}> {filtercolor === 'c2' && <HiCheck />} </div>
-                            <div className={filtercolor === 'c3' ? "selected-color background-colors mint" : "background-colors mint"}  onClick={() => onClikedflitercolor('c3')}> {filtercolor === 'c3' && <HiCheck />}</div>
-                            <div className={filtercolor === 'c4' ? "selected-color background-colors purple" : "background-colors purple"}  onClick={() => onClikedflitercolor('c4')}> {filtercolor === 'c4' && <HiCheck />}</div>
-                            <div className={filtercolor === 'c5' ? "selected-color background-colors sand" : "background-colors sand"}  onClick={() => onClikedflitercolor('c5')}> {filtercolor === 'c5' && <HiCheck />}</div>
-                            
-                            </> }
-                        </div>
-                        <h4>Based on date</h4>
-                        <div className="toolcolor-container">
-                            <div  className="toolkit-date-container mr-3">
-                                <label htmlFor="fromdate">From date : </label><br/>
-                                <input id="fromdate" type="date"  onChange={(event) => setTodofromDate(event.target.value)} /> <br/>
-                            </div>
-                            <div className=" toolkit-date-container ml-3"> 
-                                <label htmlFor="todate">To date : </label><br/>
-                                <input id="todate" type="date"  onChange={(event) => setTodotoDate(event.target.value)} />
-                            </div>
-                            <button onClick={onClickapplyfilter} className={theme ? "dark-delete-button apply-filter-btn largescren-applybtn" : "delete-btn apply-filter-btn largescren-applybtn"} >Apply filter</button>
-                        </div>
-                            <button onClick={onClickapplyfilter} className={theme ? "dark-delete-button apply-filter-btn smallscreen-applybtn" : "delete-btn apply-filter-btn smallscreen-applybtn"} >Apply filter</button>
-                        </div> )} 
-                </div>
-            </div>
                 {todos.length  === 0 ? <div className="empty-view-conatiner" onClick={onClickSendTodo}>
                     <AiOutlineBulb className="bulb-img"/>
                     <h2 className={theme ? "dark-emtyview-heading" :"emptyview-heading"}>Tasks Appear here </h2>
